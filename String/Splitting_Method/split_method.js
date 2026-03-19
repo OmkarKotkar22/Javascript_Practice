@@ -20,9 +20,9 @@ let limitedSplit = string.split( " ", 3);
 console.log(limitedSplit);
 // Output: [ 'Hello', 'World!', 'Welcome' ]
 
-let regexSplit = string.split(/[\s,.!]+/);
+let regexSplit = string.split(/[\s,.!]/);
 console.log(regexSplit);
-// Output: [ 'Hello', 'World', 'Welcome', 'to', 'JavaScript', 'programming', '' ]
+// Output: [ 'Hello', 'World', 'Welcome', 'to', 'JavaScript', 'programming' ]
 
 let emptySplit = string.split("");
 console.log(emptySplit);
