@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cal Quantity Rate</title>
+    <style>
+      body {
+        height: 90vh;
+        background-color: rgb(31, 5, 98);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .Div{
+        background:  rgb(100, 71, 174);
+        padding: 50px;
+      }
+      input{
+        width: 400px;
+        height: 50px;
+        margin-left: 30px;
+      }
+    </style>
+    <script type="text/javascript">
+      let rate = 50;
+      function acceptFirstVal() {
+        let quantity = document.getElementById("qty").value;
+        let rate = parseInt(document.getElementById("rate").value);
+        let total = quantity * rate;
+
+        document.getElementById("total").value = total;
+      }
+
+      function acceptSecondVal() {}
+    </script>
+  </head>
+  <body>
+    <div class="Div">
+      Quantity :
+      <input
+        type="text"
+        id="qty"
+        value=""
+        onkeyup="acceptFirstVal()"
+      /><br /><br />
+      Rate : <input type="text" id="rate" value="50" readonly /><br /><br />
+      Total : <input type="text" name="" id="total" /><br /><br />
+    </div>
+  </body>
+</html>

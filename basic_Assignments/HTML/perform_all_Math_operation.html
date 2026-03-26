@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 90vh;
+        background-color: rgb(31, 5, 98);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .Div {
+        background: rgb(100, 71, 174);
+        padding: 50px;
+      }
+      input {
+        width: 200px;
+        height: 50px;
+        margin-left: 30px;
+      }
+    </style>
+    <script type="text/javascript">
+      let first, second, result;
+      function firstValue(val){
+        first = parseInt(val);
+      }
+      function secondValue(val){
+        second = parseInt(val);
+      }
+      function calAdd(){
+        document.getElementById("op").value = first + second;
+      }
+      function calSub(){
+        document.getElementById("op").value = first - second;
+      }
+      function calMul(){
+        document.getElementById("op").value = first * second;
+      }
+      function calDiv(){
+        document.getElementById("op").value = first / second;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="Div">
+      1st Input: &nbsp;
+      <input type="text" name="first" id="f" value="" onkeyup="firstValue(this.value)"/><br /><br />
+      2nd Input:
+      <input type="text" name="second" id="s" value="" onkeyup="secondValue(this.value)"/><br /><br />
+      Output : &nbsp;&nbsp;&nbsp;<input
+        type="text"
+        name="o/p"
+        id="op"
+      /><br /><br />
+
+      <input type="button" value="Addition" id="add" onclick="calAdd()" />&nbsp;
+      <input type="button" value="Subtraction" id="sub" onclick="calSub()" />&nbsp;
+      <input type="button" value="Multiplication" id="mul" onclick="calMul()" />&nbsp;
+      <input type="button" value="Division" id="div" onclick="calDiv()" />&nbsp;
+    </div>
+  </body>
+</html>

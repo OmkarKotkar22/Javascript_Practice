@@ -1,0 +1,37 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element By Id Method</title>
+    <script type="text/javascript">
+        function show(){
+            let headingTag = document.getElementById('h1');
+            let str = headingTag.value;
+            alert(str);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" name="s" id="h1" value="Click Me" style="width: 400px; height: 40px;" onclick="show()">
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function show(){
+            let headingTag = document.getElementById('h1');
+            headingTag.innerHTML = "Good Afternoon";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="h1">Good Morning</h1>
+    <input type="button" name="s" id="s" onclick="show()" value="Click Me">
+</body>
+</html>

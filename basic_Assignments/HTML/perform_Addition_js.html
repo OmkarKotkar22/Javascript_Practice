@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 300px;
+            height: 40px;
+        }
+    </style>
+    <script type="text/javascript">
+        function show(){
+            let firstTextBox = document.getElementById("f");
+            let secondTextBox = document.getElementById("s");
+            let firstVal = firstTextBox.value;
+            let secondVal = secondTextBox.value;
+            let result = parseInt(firstVal) + parseInt(secondVal);
+            let divTag = document.getElementById("D");
+            let myHeading = document.createElement("h1");
+            myHeading.innerHTML = "Addition is: " + result;
+            divTag.appendChild(myHeading);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="first" id="f" value=""><br><br>
+    <input type="text" name="second" id="s" value=""><br><br>
+    <input type="submit" name="s" value="Calculate Addition" onclick="show()"><br><br>
+    <div id="D"></div>
+</body>
+</html>
