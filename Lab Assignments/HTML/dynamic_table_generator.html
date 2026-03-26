@@ -1,0 +1,29 @@
+<!-- 13. Dynamic Table Generator
+Description: Create table from user input.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      tr,td{
+         padding: 10px;
+      }
+    </style>
+ </head>
+ <body>
+   <input type="text" id="name" placeholder="Enter Name">
+   <input type="text" id="age" placeholder="Enter Age">
+   <button onclick="addData()">Add Data</button>
+   <table border="1" id="table">
+      <tr>
+         <td>Name</td>
+         <td>Age</td>
+      </tr>
+   </table>
+   <script src="../JS/dynamic_table_generator.js"></script>
+ </body>
+ </html>
