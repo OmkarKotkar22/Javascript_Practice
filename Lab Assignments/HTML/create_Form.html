@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(21, 40, 59);
+            position: relative;
+        }
+        #showForm{
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            margin: 50px;
+            font-size: large;
+            padding: 5px;
+
+        }
+        #hideForm{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: 50px;
+            font-size: large;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button id="showForm" onmouseover="showForm()">Show Form</button>
+    <button id="hideForm" onmouseover="hideForm()">Hide Form</button>
+    <div id="div"></div>
+
+    <script src="../JS/create_Form.js"></script>
+</body>
+</html>
