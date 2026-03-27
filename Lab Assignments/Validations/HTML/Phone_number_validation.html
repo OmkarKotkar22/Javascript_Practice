@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="mob" onkeyup="checkPhone(this.value)" placeholder="Enter Mobile Number">
+    <span id="s"></span>
+
+    <br><br>
+
+    <button onclick="submitForm()">Submit</button>
+
+    <script>
+    function submitForm(){
+        let value = document.getElementById("mob").value;
+        let span = document.getElementById("s");
+
+        if(span.innerHTML == "Mobile number is valid"){
+            alert("Form Submitted Successfully ");
+        }
+        else{
+            alert("Invalid Mobile Number ");
+        }
+    }
+    </script>
+</body>
+</html>
