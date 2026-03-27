@@ -6,25 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="mob" onkeyup="checkPhone(this.value)" placeholder="Enter Mobile Number">
+    <input type="text" id="mob" value="" onkeyup="checkPhone(this.value)" placeholder="Enter Mobile Number">
     <span id="s"></span>
 
     <br><br>
-
     <button onclick="submitForm()">Submit</button>
-
-    <script>
-    function submitForm(){
-        let value = document.getElementById("mob").value;
-        let span = document.getElementById("s");
-
-        if(span.innerHTML == "Mobile number is valid"){
-            alert("Form Submitted Successfully ");
-        }
-        else{
-            alert("Invalid Mobile Number ");
-        }
-    }
-    </script>
+    <script src="../JS/phone_number_validation.js"></script>
 </body>
 </html>

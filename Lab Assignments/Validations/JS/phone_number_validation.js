@@ -1,36 +1,48 @@
+let isValid = false; // ✅ global flag
+
 function checkPhone(str){
     let span = document.getElementById("s");
 
-    span.innerHTML = "Please Enter the valid Mobile Number";
-    span.style.color = "red";
+    isValid = false; // reset every time
 
-    if(str.length == 10){
+    // 1. Length check
+    if(str.length != 10){
+        span.innerHTML = "Mobile number must be exactly 10 digits";
+        span.style.color = "red";
+        return;
+    }
 
-        if(!(str[0] == '6' || str[0] == '7' || str[0] == '8' || str[0] == '9')){
-            span.innerHTML = "Mobile Number not follow Indian Code";
+    // 2. First digit check
+    if(!(str[0]=='6' || str[0]=='7' || str[0]=='8' || str[0]=='9')){
+        span.innerHTML = "Mobile number must start with 6, 7, 8, or 9";
+        span.style.color = "red";
+        return;
+    }
+
+    // 3. Digit check
+    for(let i = 0; i < str.length; i++){
+        let ascii = str.charCodeAt(i);
+
+        if(ascii < 48 || ascii > 57){
+            span.innerHTML = "Only digits (0-9) are allowed";
             span.style.color = "red";
             return;
         }
+    }
 
-        for (let index = 0; index < str.length; index++) {
+    // ✅ valid
+    span.innerHTML = "Valid mobile number";
+    span.style.color = "green";
+    isValid = true; // ✅ mark valid
+}
 
-            let ascii = str.charCodeAt(index);
 
-            if(ascii >= 48 && ascii <= 57){
-                continue;
-            }
-            else{
-                span.innerHTML = "Mobile Number must contain numbers only";
-                span.style.color = "red";
-                return; 
-            }
-        }
-
-        span.innerHTML = "Mobile number is valid";
-        span.style.color = "green";
+// 🔥 Submit button
+function submitForm(){
+    if(isValid){
+        alert("Form Submitted Successfully ✅");
     }
     else{
-        span.innerHTML = "Mobile Number must be 10 digits";
-        span.style.color = "red";
+        alert("Please enter a valid mobile number ❌");
     }
 }
