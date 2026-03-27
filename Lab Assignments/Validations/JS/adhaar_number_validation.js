@@ -21,7 +21,7 @@ function checkAdhaar(str){
         span.style.color = "Green";
     }
     else{
-        span.innerHTML = "Enter the Valid Number";
+        span.innerHTML = "Enter the Valid Number only ";
         span.style.color="red";
     }
 }
