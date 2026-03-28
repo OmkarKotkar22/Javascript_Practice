@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Pan Card : <br>
+    <input type="text" name="pan" id="p" value="" onkeyup="checkPan(this.value)" style="padding: 8px;" placeholder="Enter here">
+    <span id="s"></span><br><br>
+    <button
+      onclick="submitForm()"
+      style="
+        background-color: red;
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 10px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+      "
+      onmouseover="this.style.backgroundColor = 'green', this.style.color='black'"
+      onmouseleave="this.style.backgroundColor = 'red', this.style.color='white'"
+    >
+      Click here
+    </button>
+
+    <script src="../JS/pan_card_validation.js"></script>
+</body>
+</html>
