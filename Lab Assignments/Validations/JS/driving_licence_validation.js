@@ -31,7 +31,6 @@ function checkDriving(str){
     }
 
     for(let i = 4; i < 8; i++){
-        let ch = str.charCodeAt(i);
         if(!(ch>=48 && ch <= 57)){
             span.innerHTML = "Invalid Year";
             span.style.color="red";
