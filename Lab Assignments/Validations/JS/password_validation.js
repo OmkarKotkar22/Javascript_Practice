@@ -1,5 +1,5 @@
 let isValid = false;
-
+let isConfirmValid = false;
 function checkPwd(str) {
     isValid = false;
 
@@ -71,11 +71,39 @@ function checkPwd(str) {
     
 }
 
-function submitForm() {
-    if(isValid){
-        alert("Password Submitted Successfully!");
+function checkConfirm(){
+    let pwd = document.getElementById("pwd").value;
+    let cpwd = document.getElementById("cpwd").value;
+    let msg = document.getElementById("msg2");
+
+    isConfirmValid = false;
+
+    if(cpwd.length == 0){
+        msg.innerHTML = "Confirm Password required";
+        msg.style.color= "red";
+        return;
+    }
+
+    if(pwd == cpwd){
+        msg.innerHTML = "Password Match";
+        msg.style.color="green";
+        isConfirmValid = true;
     }
     else{
-        alert("password is wrong!!");
+        msg.innerHTML = "Password does not match";
+        msg.style.color ="red";
     }
+}
+
+
+function submitForm() {
+    if(!isValid){
+        alert("Password is invalid ❌");
+    }
+    if(!isConfirmValid){
+        alert("Confirm Password is incorrect ❌");
+    }
+    else
+        alert("Password Submitted Successfully ✅");
+    
 }
