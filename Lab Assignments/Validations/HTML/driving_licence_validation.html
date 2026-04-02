@@ -1,31 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Enter Driving Licence No : <br><br><input type="text" id="drive" value="" onkeyup="checkDriving(this.value)" placeholder="Enter here" style="padding: 5px;">
-    <span id="s"></span><br><br>
-    <button
-      onclick="submitForm()"
-      style="
-        background-color: red;
-        color: white;
-        font-size: 15px;
-        font-weight: 600;
-        padding: 10px;
-        border: none;
-        border-radius: 15px;
-        cursor: pointer;
-      "
-      onmouseover="this.style.backgroundColor = 'green', this.style.color='black'"
-      onmouseleave="this.style.backgroundColor = 'red', this.style.color='white'"
-    >
-      Click here
-    </button>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Driving Licence Validation</title>
 
-    <script src="../JS/driving_licence_validation.js"></script>
+<style>
+
+/* 🌌 Background */
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    font-family:Arial;
+}
+
+/* 📦 Container */
+.container{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    width:320px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    animation:fadeIn 0.7s ease;
+}
+
+/* 📝 Input */
+input{
+    width:90%;
+    padding:10px;
+    border-radius:8px;
+    border:2px solid #ccc;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus{
+    border-color:#764ba2;
+    box-shadow:0 0 8px rgba(118,75,162,0.5);
+}
+
+/* 🔘 Button */
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#764ba2;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#5a3f8c;
+    transform:scale(1.1);
+}
+
+/* 📢 Message */
+#s{
+    display:block;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+/* 🎬 Animation */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h3>Driving Licence Validation</h3>
+
+    <input type="text" id="drive"
+           onkeyup="checkDriving(this.value)"
+           placeholder="MH12 2018 1234567">
+
+    <span id="s"></span>
+
+    <button onclick="submitForm()">Submit</button>
+
+</div>
+
+<script src="../JS/driving_licence_validation.js">
+
+</script>
+
 </body>
 </html>
