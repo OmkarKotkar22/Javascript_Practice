@@ -3,12 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Textbox Validation</title>
+
+<style>
+
+/* 🌌 Background */
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family:Arial;
+}
+
+/* 📦 Container */
+.container{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    width:300px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    animation:fadeIn 0.8s ease;
+}
+.output{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    width:300px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    animation:fadeIn 0.8s ease;
+}
+
+/* 📝 Input */
+input[type="text"]{
+    width:90%;
+    padding:10px;
+    border-radius:8px;
+    border:2px solid #ccc;
+    outline:none;
+    transition:0.3s;
+}
+
+/* Focus effect */
+input[type="text"]:focus{
+    border-color:#2c5364;
+    box-shadow:0 0 8px rgba(44,83,100,0.5);
+}
+
+/* 🔘 Button */
+input[type="button"]{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:#2c5364;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* Hover effect */
+input[type="button"]:hover{
+    transform:scale(1.1);
+    background:#1b3a4b;
+}
+
+/* 📢 Message */
+#s{
+    display:block;
+    margin-top:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+/* 🎬 Animation */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
 </head>
 <body>
-    <input type="text" name="s" id="txt" placeholder="Enter Here!">
-    <input type="button" onmouseover="checktxt()" value="Click Here">
-    <span id="s"></span>
+    <div class="container">
+        <input type="text" name="s" id="txt" placeholder="Enter Here!"><br><br>
+        <input type="button" onmouseover="checktxt()" value="Click Here"><br><br>
+    </div>
+    <br><br>
+    <div class="output">Output : 
+        <span id="s"></span>
+    </div>
 
     <script src="../JS/check_textbox_empty_not.js"></script>
 </body>
