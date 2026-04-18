@@ -3,14 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <input type="text" id="mob" value="" onkeyup="checkPhone(this.value)" placeholder="Enter Mobile Number">
-    <span id="s"></span>
+    <title>Mobile Validation</title>
 
-    <br><br>
-    <button onclick="submitForm()">Submit</button>
-    <script src="../JS/phone_number_validation.js"></script>
+<style>
+
+/* 🌌 Background */
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff7e5f,#feb47b);
+    font-family:Arial;
+}
+
+/* 📦 Box */
+.container{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    width:300px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* 📝 Input */
+input{
+    width:90%;
+    padding:10px;
+    border-radius:8px;
+    border:2px solid #ccc;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus{
+    border-color:#ff7e5f;
+    box-shadow:0 0 8px rgba(255,126,95,0.5);
+}
+
+/* 🔘 Button */
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#ff7e5f;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+    background:#e7644a;
+}
+
+/* 📢 Message */
+#s{
+    display:block;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h3>Mobile Validation</h3>
+
+<input type="text" id="mob"
+       onkeyup="checkPhone(this.value)"
+       placeholder="Enter Mobile Number">
+
+<span id="s"></span>
+
+<button onclick="submitForm()">Submit</button>
+
+</div>
+
+<script src="../JS/phone_number_validation.js">
+
+</script>
+
 </body>
 </html>
