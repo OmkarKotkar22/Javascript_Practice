@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    font-family:Arial;
+}
+
+/* 📦 Container */
+.container{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    width:320px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    animation:fadeIn 0.7s ease;
+}
+
+/* 📝 Input */
+input{
+    width:30%;
+    padding:10px;
+    border-radius:8px;
+    border:2px solid #ccc;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus{
+    border-color:#764ba2;
+    box-shadow:0 0 8px rgba(118,75,162,0.5);
+}
+
+/* 📢 Message */
+#alert{
+    display:block;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+/* 🎬 Animation */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+    </style>
+</head>
+<body>
+    <input type="text" value="" id="in" onkeyup="url(this.value)" placeholder="Enter here URL">
+    <span id="alert"></span>
+
+    <script src="../JS/url_validation.js"></script>
+</body>
+</html>
