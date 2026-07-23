@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .click-btn{
+            padding: 10px 20px;
+            font-size: 20px;
+            margin: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <button class="click-btn">Button 1</button>
+    <button class="click-btn">Button 2</button>
+    <button class="click-btn">Button 3</button>
+    <button class="click-btn">Button 4</button>
+    <button class="click-btn">Button 5</button>
+
+    <script>
+        let btns = document.getElementsByClassName("click-btn");
+
+        for(let i = 0; i <= btns.length; i++){
+            btns[i].addEventListener("click", function(){
+                alert("Buttons " + (i+1) + " is Clicked");
+            })
+        }
+    </script>
+</body>
+</html>

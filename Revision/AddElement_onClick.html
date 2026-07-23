@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addElement()">Add Element</button>
+    <div id="contain"></div>
+
+    <script>
+        function addElement(){
+            let newElement = document.createElement("ul");
+            let list1 = document.createElement("li");
+            list1.innerHTML = "GIRI";
+            let list2 = document.createElement("li");
+            list2.innerHTML = "TECH HUB";
+            newElement.appendChild(list1);
+            newElement.appendChild(list2);
+            document.getElementById("contain").appendChild(newElement);
+        }
+    </script>
+</body>
+</html>

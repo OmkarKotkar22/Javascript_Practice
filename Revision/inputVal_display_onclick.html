@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #input{
+            width: 200px;
+            height: 30px;
+            margin-bottom: 20px;
+        }
+        #output{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="abc" id="input" value ="" placeholder="Enter Text..."></input>
+    <button onclick="displayValue()">Click Me</button>
+    <p id="output"></p>
+
+    <script>
+        function displayValue(){
+            let inputVal = document.getElementById("input").value;
+            document.getElementById("output").innerHTML = inputVal;
+        }
+    </script>
+</body>
+</html>

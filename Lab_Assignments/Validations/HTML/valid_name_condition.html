@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Validation</title>
+
+<style>
+
+/* 🌌 Background */
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#43cea2,#185a9d);
+    font-family:Arial;
+}
+
+/* 📦 Container */
+.container{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    width:350px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    text-align:center;
+    animation:fadeIn 0.6s ease;
+}
+
+/* 📝 Input */
+input{
+    width:90%;
+    padding:10px;
+    border-radius:8px;
+    border:2px solid #ccc;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus{
+    border-color:#43cea2;
+    box-shadow:0 0 8px rgba(67,206,162,0.5);
+}
+
+/* 📋 Conditions List */
+ul{
+    text-align:left;
+    margin-top:15px;
+    font-size:14px;
+}
+
+/* 📢 Message */
+#s{
+    display:block;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+/* 🎬 Animation */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h3>Password Checker</h3>
+
+<input type="text" id="pwd"
+       placeholder="Enter Password"
+       onkeyup="pwdValidate(this.value)">
+
+<ul>
+    <li>Minimum one digit</li>
+    <li>Minimum one capital letter</li>
+    <li>Minimum one small letter</li>
+    <li>Minimum one special character</li>
+    <li>Minimum length 8</li>
+</ul>
+
+<span id="s"></span>
+
+</div>
+
+<script src="../JS/valid_name_condition.js">
+
+</script>
+
+</body>
+</html>
