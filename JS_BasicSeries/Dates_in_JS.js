@@ -31,5 +31,4 @@ let mytimeStamp = Date.now();
 console.log("Current Timestamp: " + mytimeStamp);
 
 console.log(Math.floor(Date.now()/1000)); // Current timestamp in seconds
-
-
+console.log(Math.floor(Date.now()/1000) + 3600); // Current timestamp in seconds + 1 hour
